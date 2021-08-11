@@ -1,5 +1,5 @@
-##Android开发常用工具类
-###1、AppUtil
+## Android开发常用工具类
+### 1、AppUtil
 该类包含常用的App工具类，涉及到版本号的获取、版本号的名称、应用程序图标等功能。
 
 * public static String getPacketName(Context context)，获取包名
@@ -9,7 +9,7 @@
 * public static Drawable getApplicationIcon(Context context)，获取应用程序的icon图标
 * public static void installApk(Activity activity,String path)，启动安装应用程序
 
-###2、BitmapUtil
+### 2、BitmapUtil
 该类包含Bitmap常用的工具类，涉及到Bitmap的获取、Bitmap与Drawable的相互转换。
 
 * public static Bitmap getBitmapFromResource(Context context,int id,int height,int width)，根据资源id获取指定大小的Bitmap对象
@@ -19,7 +19,7 @@
 * public static Bitmap drawableToBitmap(Drawable drawable)，将Drawable对象转换成Bitmap对象
 * public static byte[] bitmapToByte(Bitmap bitmap)，将Bitmap对象转换为byte[]数组
 
-###3、DateUtil
+### 3、DateUtil
 该类包含日期的常用处理，涉及到日期字符串与Date对象的各种格式相互转换、获取星期、年月份、天数等功能。
 
 * public static String getNowDate(DatePattern pattern)，返回当前时间，格式2015-12-3	10:54:21
@@ -35,7 +35,7 @@
 
 补充内部类DatePattern：为我所定义的日期格式的枚举类。
 
-###4、JsonUtil
+### 4、JsonUtil
 常用的Json工具类，包含Json转换成实体、实体转json字符串、list集合转换成json、数组转换成json
 
 * public static <T> String objectToJson(T t)，将一个对象转换成一个Json字符串
@@ -47,7 +47,7 @@
 * public static ContentValues jsonToContentValues(String json)，json字符串转换为ContentValues
 
 
-###5、LogUtil
+### 5、LogUtil
 Log日志工具类
 
 * public static void i(String tag,String msg)，打印information日志
@@ -61,7 +61,7 @@ Log日志工具类
 * public static void e(String tag, String msg)，打印error日志
 * public static void e(String tag, String msg, Throwable throwable)，throwable
 
-###6、MeasureUtil
+### 6、MeasureUtil
 常用的测量工具类
 
 * public static int getMeasuredHeight(View view)，获取控件的测量高度
@@ -73,7 +73,7 @@ Log日志工具类
 * public static void setListHeight(ListView listView)，设置ListView的实际高度
 * public static void setGridViewHeight(Context context, GridView gv, int n, int m)，设置GridView的高度
 
-###7、NetWorkUtil
+### 7、NetWorkUtil
 网络工具类，包含网络的判断、跳转到设置页面
 
 * public static boolean isNetWorkEnable(Context context)，判断当前是否有网络连接
@@ -83,7 +83,7 @@ Log日志工具类
 * public static void GoSetting(Activity activity)，跳转到网络设置页面
 
 
-###8、PreferencesUtil
+### 8、PreferencesUtil
 SharedPreferences工具类，包含常用的数值获取和存储
 
 * public static boolean containsKey(Context context, String key)，是否包含key
@@ -102,7 +102,7 @@ SharedPreferences工具类，包含常用的数值获取和存储
 * public static boolean removeKey(Context context, String key)，删除关键字key
 * public static boolean clearValues(Context context)，清除所有的关键字
 
-###9、ReflectUtil
+### 9、ReflectUtil
 反射工具类
 
 * public static<T> void setFieldValue(T t,Field field, String fieldName, String value)，设置字段值
@@ -111,7 +111,7 @@ SharedPreferences工具类，包含常用的数值获取和存储
 *  public static boolean isFiledWithName(Field field, String fieldName)，判断该字段是否为FieldName对应字段
 
 
-###10、ScreenUtil
+### 10、ScreenUtil
 屏幕工具类，涉及到屏幕宽度、高度、密度比、(像素、dp、sp)之间的转换等。
 
 * public static int getScreenWidth(Context context)、获取屏幕宽度，单位为px
@@ -128,7 +128,7 @@ SharedPreferences工具类，包含常用的数值获取和存储
 * public static DisplayMetrics getDisplayMetrics(Context context)，获取DisplayMetrics对象
 
 
-###11、SDCardUtil
+### 11、SDCardUtil
 SD卡工具类，包含SD卡状态、路径、容量大小
 
 * public static boolean isSDCardEnable()，判断SD卡是否可用
@@ -145,13 +145,13 @@ SD卡工具类，包含SD卡状态、路径、容量大小
 * public long getRomTotalSize()，获得手机内存总大小 
 * public long getRomAvailableSize()，获得手机可用内存 
 
-###12、ToastUtil
+### 12、ToastUtil
 Toast工具类
 
 * public static void showLongToast(Context context, String msg)，长时Toast
 * public static void showShortToast(Context context, String msg)，短时Toast
 
-###13、XMLUtil
+### 13、XMLUtil
 XML文件工具类，包含：将xml文件解析成实体集合、获取xml标签值、将标签值解析成实体集合。这个工具类主要是讲XML的解析进行抽象出来，方便使用。
 
 * public static<T> List<T> xmlToObject(String xml, Class<T> clazz, String tagEntity)，XML文件解析成实体,不涉及到标签的属性值。
@@ -159,7 +159,7 @@ XML文件工具类，包含：将xml文件解析成实体集合、获取xml标�
 * public static String getTagAttribute(String xml, String tagName, String attributeName)，获取Xml文件中的属性值
 
 
-###14、DataBaseHelper
+### 14、DataBaseHelper
 数据库工具类，包含数据库的创建、表的创建、增删改查。
 
 * public void createTables(List<Class<?>> tableClassList)，创建数据表,该套逻辑是基于标注解和字段注解进行判断
@@ -182,7 +182,7 @@ String whereClause, String [] whereArgs)，更新数据信息
 * public void clearTableData(String tableName)，清除表中所有数据
 
 
-##操作案例：
+## 操作案例：
 ![test](http://img.blog.csdn.net/20151210172755987)
 
 
